@@ -46,13 +46,13 @@ posts = [
 
 
 def index(request):
-    return render(request, 'index.html', {'posts': posts})
+    return render(request, 'blog/index.html', {'posts': posts[::-1]})
 
 
 def post_detail(request, post_id):
     post = next(post for post in posts if post['id'] == post_id)
-    return render(request, 'detail.html', {'post': post})
+    return render(request, 'blog/detail.html', {'post': post})
 
 
 def category_posts(request, category_slug):
-    return render(request, 'category.html', {'category': category_slug})
+    return render(request, 'blog/category.html', {'category': category_slug})

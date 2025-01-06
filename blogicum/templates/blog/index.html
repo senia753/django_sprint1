@@ -12,10 +12,10 @@
                 <ul>
                     <li>Место: {{ post.place }}</li>
                     <li>Дата: {{ post.date }}</li>
-                    <li>Категория: <a href="{% url 'blog:category' post.category %}">{{ post.category }}</a></li>
+                    <li>Категория: <a href="{% url 'blog:category_posts' post.category %}">{{ post.category }}</a></li>
                 </ul>
                 <p>{{ post.text|slice:":100" }}...</p>
-                <a href="{% url 'blog:detail' post.id %}">Читать полный текст</a>
+                <a href="{% url 'blog:post_detail' post.id %}">Читать полный текст</a>
             </article>
         {% endfor %}
     </div>

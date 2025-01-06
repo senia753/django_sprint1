@@ -9,7 +9,7 @@
             <ul>
                 <li>Место: {{ post.place }}</li>
                 <li>Дата: {{ post.date }}</li>
-                <li>Категория: <a href="{% url 'blog:category' post.category %}">{{ post.category }}</a></li>
+                <li>Категория: <a href="{% url 'blog:category_posts' post.category %}">{{ post.category }}</a></li>
             </ul>
             <p>{{ post.text }}</p>
         </article>
