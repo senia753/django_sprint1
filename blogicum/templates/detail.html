@@ -1,0 +1,17 @@
+<!-- templates/detail.html -->
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <div class="container py-5">
+        <article>
+            <ul>
+                <li>Место: {{ post.place }}</li>
+                <li>Дата: {{ post.date }}</li>
+                <li>Категория: <a href="{% url 'blog:category' post.category %}">{{ post.category }}</a></li>
+            </ul>
+            <p>{{ post.text }}</p>
+        </article>
+    </div>
+{% endblock %}
